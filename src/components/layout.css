@@ -117,9 +117,16 @@ a {
   font-size: 60px;
   text-align: center;
   font-weight: 700;
-  background: linear-gradient(104deg, #050A27 0%, #4A548C 100%);
+  background: linear-gradient(104.74deg, #050A27 0%,#4A548C 100%);
   -webkit-background-clip: text;
-  -webbit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 640px) {
+  .CardGroup h2 {
+    font-size: 30px;
+  }
 }
 
 .CardGroup {
@@ -127,7 +134,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
-  jusntify-items: center;
+  justify-items: center;
 }
 
 @media (max-width: 1060px) {
