@@ -104,6 +104,7 @@ a {
   grid-gap: 40px;
   margin: 100px 0;
   justify-items: center;
+  z-index: 10;
 }
 
 @media (max-width: 640px) {

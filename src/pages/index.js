@@ -5,6 +5,31 @@ import Layout from '../components/layout'
 import Card from '../components/Card';
 import Section from '../components/Section';
 import Wave from '../components/Wave'
+import staticdata from '../../staticdata.json'
+import Cell from '../components/Cell'
+import styled from 'styled-components'
+
+
+const SectionCaption = styled.p`
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #94A4BA;
+  text-align: center;
+`
+
+const SectionCellGroup = styled.div`
+  max-width: 800px;
+  margin: 0 auto 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  padding: 0 20px;
+
+  @media (max-width: 800px)   {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`
 
 const IndexPage = () => (
   <Layout>
@@ -12,6 +37,8 @@ const IndexPage = () => (
       <div className="HeroGroup">
         <h1>台北國際<br />寵物嘉年華</h1>
         <p>歡迎來到台北寵物展</p>
+        <p>優質寵物商品超值促銷！</p>
+        <p>優質寵物商品超值促銷！</p>
         <p>優質寵物商品超值促銷！</p>
         <Link to="/page-2/">Watch the video</Link>
         <div className="Logos">
@@ -52,6 +79,15 @@ const IndexPage = () => (
       title="台北寵物展"
       text="歡迎來到台北寵物展！優質寵物商品超值促銷！"
     />
+
+    <SectionCaption>12 sections - 6 hours</SectionCaption>
+    <SectionCellGroup>
+      {staticdata.cells.map(cell => (
+        <Cell 
+          title={cell.title}
+          image={cell.image} />
+      ))}
+    </SectionCellGroup>
   </Layout>
 )
 
