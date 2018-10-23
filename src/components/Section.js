@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Wave from './wave';
+import Wave from '../components/Wave';
 
 const SectionGroup = styled.div`
     margin: 100px 0 0;
